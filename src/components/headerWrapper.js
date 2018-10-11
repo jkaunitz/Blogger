@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class HeaderWrapper extends Component {
     render() {
         return (
-            <div class='header-wrapper'>
-                <h1>"Publish the blogs that you want"</h1>
-                <p>Please sign in to continue</p>
+            <div className='header-wrapper'>
+                <h1 className='header-wrapper__title'>"Publish the blogs that you want"</h1>
+                <p className='header-wrapper__subtitle'>Please sign in to continue</p>
                 {this.props.children}
             </div>
         )
