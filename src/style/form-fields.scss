@@ -1,13 +1,15 @@
 
 // INPUT
 
-.form-input {
+.form-input,
+.form-textarea {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 129px 500px;
+    grid-template-columns: 3fr 10fr;
+    // grid-template-columns: 129px 500px;
 
     align-items: center;
-    width: 629px;
+    width: 100%;
     justify-content: center;
 
     &__title {
@@ -20,17 +22,16 @@
     }
 }
 
-.form-input {
+.form-input,
+.form-textarea {
     &__title {
-        color: $color-blue;
-        font-size: 1.8rem;
-        font-weight: 500;
-        line-height: 2.3rem;
+        @include red-title;
     }
     &__input {
         height: 4rem;
-        width: 50rem;
-        border: 1px solid $color-yellow;
+        // width: 50rem;
+        width: 100%;
+        border: 1px solid $color-gray-E6;
         border-radius: .5rem;
         padding-left: 2rem;
         font-size: 1.6rem;
@@ -38,19 +39,109 @@
     }
 }
 
+.form-textarea {
+    &__title {
+        align-self: start;
+    }
+    &__input {
+        resize: none;
+        height: 35.5rem;
+        padding-top: 1rem;
+    }
+}
+
 // BUTTON
 
-.form-button {
+.form-button,
+.form-button-small,
+.form-image {
+    &__button,
+    &__replace {
+        transition: all .2s ease;
+        &:focus {
+            outline: none;
+        }
+        &:active {
+            transform: scale(0.95) translateY(2.05px);
+        }
+    }
+}
+
+.form-button { 
     &__button {
         height: 4rem;
         width: 21.6rem;
-        border-radius: 2rem;
-        background-color: $color-blue;
+        border-radius: 0.8rem;
+        background-color: $color-purple;
 
         color: white;
         font-size: 2.2rem;
         font-weight: 500;
         line-height: 2.8rem;
         text-align: center;
+    }
+}
+
+.form-button-small {
+    &__button {
+        border-radius: 1.6rem;
+        border: 1px solid $color-gray-4D;
+        width: 7.4rem;
+        height: 2.4rem;
+    
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        text-align: center;
+    
+        width: 13rem;
+    }
+
+    &__danger {
+        border: 1px solid $color-purple;
+        color: white;
+        background-color: $color-purple;
+    }
+}
+
+// IMAGE
+.form-image {
+    display: grid;
+    grid-template-rows: [title-s] 1fr [title-e image-s] 13.7rem [image-e];
+    grid-template-columns: [s] 16rem [e];
+
+    & > * {
+        grid-column: s/e;
+    }
+
+    &__title {
+        @include red-title;
+        margin-bottom: 2rem;
+        grid-row: title-s/title-e;
+    }
+    &__image {
+        height: 13.7rem;
+        width: 16rem;
+        border: none;
+        background-color: rgb(218, 218, 218);
+        grid-row: image-s/image-e;
+        object-fit: cover;
+    }
+    &__replace {
+        border-radius: 1.6rem;
+        border: 1px solid white;
+        background-color: white;
+        
+        width: 13rem;
+        height: 2.4rem;
+    
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        text-align: center;
+    
+        color: $color-purple;
+        grid-row: image-s/image-e;
+
+        justify-self: center;
+        align-self: center;
     }
 }
