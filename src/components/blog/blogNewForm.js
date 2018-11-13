@@ -5,11 +5,11 @@ import { FormTitle } from '../formTitle';
 import { FormInput, FormButton, FormTextArea, FormImage } from '../formFields';
 
 
-class NewNewsletterForm extends Component {
+class NewBlogForm extends Component {
     
     render() {
 
-        const { handleSubmit, formTitle, newsletterToEdit } = this.props;
+        const { handleSubmit, formTitle, blogToEdit } = this.props;
         const { 
             fieldOnePlaceholder, fieldOneTitle,
             fieldTwoPlaceholder, fieldTwoTitle  
@@ -17,10 +17,10 @@ class NewNewsletterForm extends Component {
         
 
         return (
-            <form onSubmit={handleSubmit} className='new-newsletter-form'>
-                <FormTitle className='new-newsletter-form__title' text={formTitle} />
+            <form onSubmit={handleSubmit} className='new-blog-form'>
+                <FormTitle className='new-blog-form__title' text={formTitle} />
                 <Field
-                    className='new-newsletter-form__newsletter-title'
+                    className='new-blog-form__blog-title'
                     placeholder={fieldOnePlaceholder}
                     name='title'
                     type='text'
@@ -28,7 +28,7 @@ class NewNewsletterForm extends Component {
                     component={FormInput}
                 />
                 <Field
-                    className='new-newsletter-form__body'
+                    className='new-blog-form__body'
                     placeholder={fieldTwoPlaceholder}
                     name='body'
                     type='text'
@@ -36,7 +36,7 @@ class NewNewsletterForm extends Component {
                     component={FormTextArea}
                 />
                 <Field
-                    className='new-newsletter-form__submit'
+                    className='new-blog-form__submit'
                     small={true}
                     danger={true}
                     name='submit'
@@ -45,7 +45,7 @@ class NewNewsletterForm extends Component {
                     component={FormButton} 
                 />
                 <Field
-                    className='new-newsletter-form__cancel'
+                    className='new-blog-form__cancel'
                     small={true}
                     name='cancel'
                     type='button'
@@ -54,7 +54,7 @@ class NewNewsletterForm extends Component {
                     onClick={this.props.onCancel}
                 />
                 <Field
-                    className='new-newsletter-form__image'
+                    className='new-blog-form__image'
                     small={true}
                     name='image'
                     type='file'
@@ -68,8 +68,8 @@ class NewNewsletterForm extends Component {
     }
 }
 
-NewNewsletterForm = reduxForm({
-    form: 'newnewsletter'
-})(NewNewsletterForm);
+NewBlogForm = reduxForm({
+    form: 'newblog'
+})(NewBlogForm);
 
-export default NewNewsletterForm;
+export default NewBlogForm;

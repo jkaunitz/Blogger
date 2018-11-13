@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 import TabNav from './tabnav';
-import NewsletterGrid from './newsletter/newsletterGrid';
+import BlogGrid from './blog/blogGrid';
 import RequestsGrid from './requests/requestsGrid';
 
 class Dashboard extends Component {
@@ -19,9 +19,9 @@ class Dashboard extends Component {
         this.state = {
             tabs: [
                 {
-                    title: 'Newsletter',
+                    title: 'Blog',
                     active: true,
-                    component: <NewsletterGrid history={this.props.history}/>
+                    component: <BlogGrid history={this.props.history}/>
                 },
                 {
                     title: 'Requests',

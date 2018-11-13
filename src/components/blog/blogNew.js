@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
-import NewNewsletterForm from './newsletterNewForm';
+import NewBlogForm from './blogNewForm';
 
-class NewNewsletter extends Component {
+class NewBlog extends Component {
 
     onSubmit = fields => {
 
@@ -16,7 +16,7 @@ class NewNewsletter extends Component {
         formData.append('body', body);
         formData.append('image', image);
 
-        this.props.createNewNewsletter(formData, () => {
+        this.props.createNewBlog(formData, () => {
             this.props.history.push('/dashboard');
         })
     
@@ -28,13 +28,13 @@ class NewNewsletter extends Component {
 
     render() {
         return (
-            <div className='new-newsletter'>
-                <NewNewsletterForm 
+            <div className='new-blog'>
+                <NewBlogForm 
                     onCancel={() => this.onCancel()} 
                     onSubmit={(event) => this.onSubmit(event)}
-                    formTitle='New Newsletter'
-                    fieldOnePlaceholder='Newsletter Title'
-                    fieldOneTitle='Newsletter Title'
+                    formTitle='New Blog'
+                    fieldOnePlaceholder='Blog Title'
+                    fieldOneTitle='Blog Title'
                     fieldTwoPlaceholder='Body Here'
                     fieldTwoTitle='Body'
                 />
@@ -43,6 +43,6 @@ class NewNewsletter extends Component {
     }
 }
 
-NewNewsletter = connect(null, actions)(NewNewsletter);
+NewBlog = connect(null, actions)(NewBlog);
 
-export default NewNewsletter;
+export default NewBlog;

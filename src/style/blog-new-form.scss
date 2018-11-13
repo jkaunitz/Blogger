@@ -1,4 +1,4 @@
-.new-newsletter-form {
+.new-blog-form {
     display: grid;
     grid-template-columns: [s input-s] 1020px [input-e] 1fr [e];
 
@@ -9,7 +9,7 @@
         grid-row: 1;
     }
 
-    &__newsletter-title,
+    &__blog-title,
     &__body {
         margin-top: 4.1rem;
         grid-column: input-s/input-e;

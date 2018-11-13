@@ -4,11 +4,11 @@ import {
 } from './auth';
 
 import {
-    fetchNewsletters,
-    fetchNewsletterWithId,
-    createNewNewsletter,
-    editNewsletter
-} from './newsletter';
+    fetchBlogs,
+    fetchBlogWithId,
+    createNewBlog,
+    editBlog
+} from './blog';
 
 import {
     changeSelectedRequestType,
@@ -24,13 +24,13 @@ import {
 export {
     signUp, 
     signIn,
-    fetchNewsletters,
-    fetchNewsletterWithId,
+    fetchBlogs,
+    fetchBlogWithId,
     changeSelectedRequestType,
     createNewRequest,
     fetchRequests,
     changeStatus,
-    createNewNewsletter,
-    editNewsletter,
+    createNewBlog,
+    editBlog,
     updateHeader
 };

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
-import NewNewsletterForm from '../newsletter/newsletterNewForm';
+import NewBlogForm from '../blog/blogNewForm';
 
 class NewRequest extends Component {
 
@@ -29,7 +29,7 @@ class NewRequest extends Component {
     render() {
         return (
             <div className='new-request'>
-                <NewNewsletterForm 
+                <NewBlogForm 
                     onCancel={() => this.onCancel()} 
                     onSubmit={(event) => this.onSubmit(event)}
                     formTitle='New Request'

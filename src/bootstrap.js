@@ -22,9 +22,9 @@ import Signin from './components/auth/signin';
 
 // DASHBOARD
 import Dashboard from './components/dashboard';
-import NewNewsletter from './components/newsletter/newsletterNew';
-import EditNewsletter from './components/newsletter/newsletterEdit';
-import NewsletterDetail from './components/newsletter/newsletterDetail';
+import NewBlog from './components/blog/blogNew';
+import EditBlog from './components/blog/blogEdit';
+import BlogDetail from './components/blog/blogDetail';
 
 import NewRequest from './components/requests/requestsNew';
 
@@ -40,16 +40,16 @@ function main() {
 
             {/* <Route path='/dashboard' component={requireAuth(Dashboard)}/>
 
-            <Route path='/newsletter/new' component={requireAuth(NewNewsletter)}/>
-            <Route path='/newsletter/edit/:id' component={requireAuth(EditNewsletter)}/>
-            <Route path='/newsletter/detail/:id' component={requireAuth(NewsletterDetail)}/>
+            <Route path='/blog/new' component={requireAuth(NewBlog)}/>
+            <Route path='/blog/edit/:id' component={requireAuth(EditBlog)}/>
+            <Route path='/blog/detail/:id' component={requireAuth(BlogDetail)}/>
 
             <Route path='/request/new' component={requireAuth(NewRequest)}/> */}
             <Route path='/dashboard' component={Dashboard}/>
 
-            <Route path='/newsletter/new' component={NewNewsletter}/>
-            <Route path='/newsletter/edit/:id' component={EditNewsletter}/>
-            <Route path='/newsletter/detail/:id' component={NewsletterDetail}/>
+            <Route path='/blog/new' component={NewBlog}/>
+            <Route path='/blog/edit/:id' component={EditBlog}/>
+            <Route path='/blog/detail/:id' component={BlogDetail}/>
 
             <Route path='/request/new' component={NewRequest}/>
 

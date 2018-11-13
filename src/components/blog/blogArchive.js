@@ -20,17 +20,17 @@ function ArchiveItem({title, date, _id, callback}) {
     )
 }
 
-class NewsletterArchive extends Component {
+class BlogArchive extends Component {
     render() {
         return (
             <div className='newletter-archive'>
-                <div className='newsletter-archive__title'>Archive</div>
-                <div className='newsletter-archive__items archive-items'>
-                    {/* newsletter items */}
+                <div className='blog-archive__title'>Archive</div>
+                <div className='blog-archive__items archive-items'>
+                    {/* blog items */}
                     
                     {
-                        this.props.newsletters.map(newsletter => {
-                            return <ArchiveItem callback={(_id) => history.push(`/newsletter/detail/${_id}`)} key={newsletter._id} {...newsletter}/>
+                        this.props.blogs.map(blog => {
+                            return <ArchiveItem callback={(_id) => history.push(`/blog/detail/${_id}`)} key={blog._id} {...blog}/>
                         })
                     }
                 </div>
@@ -40,10 +40,10 @@ class NewsletterArchive extends Component {
 }
 
 function mapStateToProps(state) {
-    const { newsletters } = state.newsletters;
+    const { blogs } = state.blogs;
     return {
-        newsletters
+        blogs
     }
 }
 
-export default connect(mapStateToProps)(NewsletterArchive);
+export default connect(mapStateToProps)(BlogArchive);

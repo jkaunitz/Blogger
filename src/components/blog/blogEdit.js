@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
-import NewNewsletterForm from './newsletterNewForm';
+import NewBlogForm from './blogNewForm';
 
-class EditNewsletter extends Component {
+class editBlog extends Component {
     
     onSubmit = (fields) => {
 
@@ -15,7 +15,7 @@ class EditNewsletter extends Component {
         formData.append('body', body);
         formData.append('image', image);
 
-        this.props.editNewsletter(this.componentWillMount.match.params.id, formData, () => {
+        this.props.editBlog(this.componentWillMount.match.params.id, formData, () => {
             this.props.history.push('/dashboard');
         })
         
@@ -26,18 +26,18 @@ class EditNewsletter extends Component {
     };
 
     componentDidMount() {
-        this.props.fetchNewsletterWithId(this.props.match.params.id)
+        this.props.fetchBlogWithId(this.props.match.params.id)
     }
 
     render() {
         return (
-            <div className='new-newsletter'>
-                <NewNewsletterForm
-                    newsletterToEdit={this.props.newsletterToEdit}
+            <div className='new-blog'>
+                <NewBlogForm
+                    blogToEdit={this.props.blogToEdit}
                     onCancel={() => this.onCancel()} 
                     onSubmit={(event) => this.onSubmit(event)}
-                    formTitle='Edit Newsletter'
-                    fieldOneTitle='Newsletter Title'
+                    formTitle='Edit Blog'
+                    fieldOneTitle='Blog Title'
                     fieldTwoTitle='Body'
                 />
             </div>
@@ -45,4 +45,4 @@ class EditNewsletter extends Component {
     }
 }
 
-export default connect(null, actions)(EditNewsletter);
+export default connect(null, actions)(editBlog);

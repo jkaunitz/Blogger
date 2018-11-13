@@ -63,7 +63,7 @@ export class FormImage extends Component {
 
     handleSelectedImage = (event) => {
         const { input: {onChange } } = this.props;
-        var image = document.getElementById('newsletter-new-image');
+        var image = document.getElementById('blog-new-image');
         image.src = URL.createObjectURL(event.target.files[0]);
         onChange(event.target.files[0])
     }
@@ -74,7 +74,7 @@ export class FormImage extends Component {
             <div className={`${className} form-image`}>
                 <label className='form-image__title'>{title}</label>
                 <img 
-                    id='newsletter-new-image'
+                    id='blog-new-image'
                     className='form-image__image'
                     src={imageUrl}
                 />

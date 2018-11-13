@@ -1,19 +1,19 @@
 import {
-    SET_NEWSLETTERS,
-    FETCH_NEWSLETTER_ID
+    SET_BLOGS,
+    FETCH_BLOG_ID
 } from './types';
 
 import axios from 'axios';
 import { ROOT_URL } from '../config';
 
-export function fetchNewsletters() {
+export function fetchBlogs() {
     return function(dispatch) {
         const token = localStorage.getItem('token');
         const headers = {headers: {authorization: token}}
-        axios.get(`${ROOT_URL}/newsletters`, headers)
+        axios.get(`${ROOT_URL}/blogs`, headers)
             .then(response => {
                 dispatch({
-                    type: SET_NEWSLETTERS,
+                    type: SET_BLOGS,
                     payload:  response.data
                 })
             })
@@ -24,17 +24,17 @@ export function fetchNewsletters() {
 }
 
 
-export function fetchNewsletterWithId(id) {
+export function fetchBlogWithId(id) {
     return {
-        type: FETCH_NEWSLETTER_ID,
+        type: FETCH_BLOG_ID,
         payload: id
     }
 }
 
-export function createNewNewsletter(formData, success) {
+export function createNewBlog(formData, success) {
     const token = localStorage.getItem('token');
     return function() {
-        axios.post(`${ROOT_URL}/newsletters/new`, formData, {
+        axios.post(`${ROOT_URL}/blogs/new`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
                 authorization: token
@@ -50,11 +50,11 @@ export function createNewNewsletter(formData, success) {
     }
 }
 
-export function editNewsletter(itemId, formData, success) {
+export function editBlog(itemId, formData, success) {
     const token = localStorage.getItem('token');
     const id = itemId;
     return function() {
-        axios.post(`${ROOT_URL}/newsletters/edit/${id}`, formData, {
+        axios.post(`${ROOT_URL}/blogs/edit/${id}`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
                 authorization: token
