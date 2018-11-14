@@ -30,9 +30,9 @@
     &__input {
         height: 4rem;
         // width: 50rem;
-        width: 100%;
-        border: 1px solid $color-gray-E6;
-        border-radius: .5rem;
+        width: 75%;
+        border: 1px solid $color-magenta;
+        border-radius: .3rem;
         padding-left: 2rem;
         font-size: 1.6rem;
         font-weight: 500;
@@ -84,8 +84,8 @@
 
 .form-button-small {
     &__button {
-        border-radius: 1.6rem;
-        border: 1px solid $color-gray-4D;
+        border-radius: 0.6rem;
+        border: 1px solid $color-light-blue;
         width: 7.4rem;
         height: 2.4rem;
     

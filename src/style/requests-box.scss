@@ -99,12 +99,12 @@
 }
 
 .requests-box-inactive {
-    border-color: $color-gray-E6;
+    border-color: $color-magenta;
     
     .requests-box {
         &__title,
         &__count {
-            color: $color-gray-4D;
+            color: $color-skyblue;
         }
         &__point {
             display: none;

@@ -60,7 +60,7 @@ class RequestsItem extends Component {
                     <div className='requests-item__title__text'>{title}</div>
                     <Icon callback={() => this.toggleDropdown()} className='requests-item__title__arrow' icon='fas fa-sort-down'/>
                 </div>
-                <div className='requests-item__tenant-unit'>
+                <div className='requests-item__tenant-address'>
                     Max - Unit 115
                 </div>
                 <div className='requests-item__date'>
@@ -97,10 +97,11 @@ class RequestsItem extends Component {
 }
 
 function mapStateToProps(state) {
-    const { fullname, unit } = state.auth.user;
+    const { firstname, lastname, address } = state.auth.user;
     return {
-        fullname,
-        unit
+        firstname,
+        lastname,
+        address
     }
 }
 

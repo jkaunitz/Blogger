@@ -12,21 +12,37 @@ class SignupForm extends Component {
 
         return (
             <form onSubmit={handleSubmit} className='sign-up-form'>
-                <FormTitle className='sign-up-form__title' text='New User' />
+                <FormTitle className='sign-up-form__title' text='Create User' />
                 <Field
-                    className='sign-up-form__fullname'
-                    placeholder='Enter Your Full Name'
-                    name='fullname'
+                    className='sign-up-form__firstname'
+                    placeholder='Enter Your First Name'
+                    name='firstname'
                     type='text'
-                    title='Full Name'
+                    title='First Name'
                     component={FormInput} 
                 />
                 <Field
-                    className='sign-up-form__unit'
-                    placeholder='Enter Unit #'
-                    name='unit'
+                    className='sign-up-form__lastname'
+                    placeholder='Enter Your Last Name'
+                    name='lastname'
                     type='text'
-                    title='Unit #'
+                    title='Last Name'
+                    component={FormInput} 
+                />
+                <Field
+                    className='sign-up-form__address'
+                    placeholder='Enter Home Address'
+                    name='address'
+                    type='text'
+                    title='Home Address'
+                    component={FormInput} 
+                />
+                <Field
+                    className='sign-up-form__phone'
+                    placeholder='Enter Mobile #'
+                    name='phone'
+                    type='tel'
+                    title='Mobile #'
                     component={FormInput} 
                 />
                 <Field
@@ -43,6 +59,22 @@ class SignupForm extends Component {
                     name='password'
                     type='password'
                     title='Password'
+                    component={FormInput} 
+                />
+                <Field
+                    className='sign-up-form__confirm-email'
+                    placeholder='Confirm Email'
+                    name='confirm-email'
+                    type='email'
+                    title='Confirm Email'
+                    component={FormInput} 
+                />
+                <Field
+                    className='sign-up-form__confirm-password'
+                    placeholder='Confirm Password'
+                    name='confirm-password'
+                    type='password'
+                    title='Confirm Password'
                     component={FormInput} 
                 />
                 <Field

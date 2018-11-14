@@ -19,7 +19,7 @@
         flex-direction: row;
         align-items: flex-end;
     }
-    &__tenant-unit {
+    &__tenant-address {
         align-self: start;
         grid-column: title-s/title-e;
         grid-row: tenant-s/tenant-e;
@@ -65,11 +65,11 @@
             margin-right: 2.5rem;
         }
         &__arrow {
-            color: $color-gray-4D;
+            color: $color-skyblue;
             font-size: 3rem;
         }
     }
-    &__tenant-unit {
+    &__tenant-address {
         color: $color-purple;
         font-family: $font-barlow-cond;
         font-size: 1.3rem;

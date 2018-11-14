@@ -58,7 +58,8 @@ class Dashboard extends Component {
 
   function mapStateToProps(state) {
       return {
-          name: state.auth.user.fullname
+          name: state.auth.user.firstname,
+          name: state.auth.user.lastname
       }
   }
 

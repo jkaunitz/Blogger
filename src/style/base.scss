@@ -14,7 +14,7 @@ html {
 body {
     font-family: $font-barlow;
     font-weight: 400;
-    color: $color-gray-4D;
+    color: $color-skyblue;
 }
 
 .layout-grid {
@@ -28,7 +28,7 @@ body {
 
 .bar {
     height: 4rem;
-    background-color: $color-gray-D8;
+    background-color: $color-pink;
     grid-row: bar-s/bar-e;
     grid-column: page-s/page-e;
 }
