@@ -97,10 +97,10 @@ class RequestsItem extends Component {
 }
 
 function mapStateToProps(state) {
-    const { firstname, lastname, address } = state.auth.user;
+    const { fullname, username, address } = state.auth.user;
     return {
-        firstname,
-        lastname,
+        fullname,
+        username,
         address
     }
 }

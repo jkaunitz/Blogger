@@ -33,7 +33,7 @@ class SigninForm extends Component {
                     className='sign-in-form__login'
                     name='login'
                     type='submit'
-                    title='Login'
+                    title='Sign In'
                     component={FormButton} 
                 />
                 <div className='sign-in-form__text-links'>

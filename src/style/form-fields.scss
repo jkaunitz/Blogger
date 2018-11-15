@@ -56,12 +56,15 @@
 .form-image {
     &__button,
     &__replace {
-        transition: all .2s ease;
+        transition: all 0.4s ease;
         &:focus {
             outline: none;
         }
         &:active {
             transform: scale(0.95) translateY(2.05px);
+        }
+        &:hover {
+            opacity: 0.4;
         }
     }
 }
@@ -78,6 +81,8 @@
         font-weight: 500;
         line-height: 2.8rem;
         text-align: center;
+
+        cursor: pointer;
     }
 }
 
@@ -93,6 +98,7 @@
         text-align: center;
     
         width: 13rem;
+        cursor: pointer;
     }
 
     &__danger {

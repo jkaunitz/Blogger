@@ -14,19 +14,19 @@ class SignupForm extends Component {
             <form onSubmit={handleSubmit} className='sign-up-form'>
                 <FormTitle className='sign-up-form__title' text='Create User' />
                 <Field
-                    className='sign-up-form__firstname'
-                    placeholder='Enter Your First Name'
-                    name='firstname'
+                    className='sign-up-form__fullname'
+                    placeholder='Enter Your Full Name'
+                    name='fullname'
                     type='text'
-                    title='First Name'
+                    title='Full Name'
                     component={FormInput} 
                 />
                 <Field
-                    className='sign-up-form__lastname'
-                    placeholder='Enter Your Last Name'
-                    name='lastname'
+                    className='sign-up-form__username'
+                    placeholder='Enter Your Username'
+                    name='username'
                     type='text'
-                    title='Last Name'
+                    title='Username'
                     component={FormInput} 
                 />
                 <Field
@@ -81,7 +81,7 @@ class SignupForm extends Component {
                     className='sign-up-form__create-account'
                     name='createaccount'
                     type='submit'
-                    title='Create Account'
+                    title='Sign Up'
                     component={FormButton} 
                 />
                 <div className='sign-up-form__text-links'>
