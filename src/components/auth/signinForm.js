@@ -12,7 +12,7 @@ class SigninForm extends Component {
         
         return (
             <form onSubmit={handleSubmit} className='sign-in-form'>
-                <FormTitle className='sign-in-form__title' text='Login' />
+                <FormTitle className='sign-in-form__title' text='Returning User' />
                 <Field
                     className='sign-in-form__email'
                     placeholder='Enter Email'

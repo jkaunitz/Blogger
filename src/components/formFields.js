@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 export class FormInput extends Component {
     render() {
-        const { className, title, input, type, placeholder, editValue } = this.props;
+        const { className, title, input, type, placeholder } = this.props;
         return (
             <div className={`${className} form-input`}>
                 <label className='form-input__title'>{title}</label>
@@ -20,7 +20,7 @@ export class FormInput extends Component {
 
 export class FormTextArea extends Component {
     render() {
-        const { className, title, input, type, placeholder, editValue } = this.props;
+        const { className, title, input, type, placeholder } = this.props;
         return (
             <div className={`${className} form-textarea`}>
                 <label className='form-textarea__title'>{title}</label>
@@ -36,7 +36,6 @@ export class FormTextArea extends Component {
         )
     }
 }
-
 
 export class FormButton extends Component {
     render() {
