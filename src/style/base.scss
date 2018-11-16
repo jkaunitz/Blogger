@@ -14,7 +14,8 @@ html {
 body {
     font-family: $font-barlow;
     font-weight: 400;
-    color: $color-skyblue;
+    color: $color-maroon;
+    background-color: $color-ghostwhite;
 }
 
 .layout-grid {
@@ -22,12 +23,12 @@ body {
     height: 100vh;
 
     display: grid;
-    grid-template-rows: [page-s header-s] 13.6rem [header-e bar-s] auto [bar-e content-s] 1fr [content-e page-e];
+    grid-template-rows: [page-s header-s] 10rem [header-e bar-s] auto [bar-e content-s] 1fr [content-e page-e];
     grid-template-columns: [page-s] 14rem [content-s] 1fr [content-e] 14rem [page-e];
 }
 
 .bar {
-    height: 4rem;
+    height: 1.5rem;
     background-color: $color-pink;
     grid-row: bar-s/bar-e;
     grid-column: page-s/page-e;

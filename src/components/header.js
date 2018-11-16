@@ -1,9 +1,9 @@
 import React from 'react';
 
-export function Header({ title, subtitle }) {
+export function Header({ title }) {
     return (
         <div className='header'>
-            <h1 className='header__title'>{title}</h1>
+            <h1 className='header__title'>My Blogger!</h1>
         </div>
     )
 }

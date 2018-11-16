@@ -7,10 +7,6 @@ import SigninForm from './signinForm';
 
 class Signin extends Component {
 
-    componentDidMount() {
-        this.props.updateHeader('Welcome to My Blogger', 'Sign in to continue', false);
-    }
-
     onSubmit = (fields) => {
         this.props.signIn(fields, () => {
             this.props.history.push('/dashboard');

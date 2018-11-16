@@ -23,7 +23,7 @@ function ArchiveItem({title, date, _id, callback}) {
 class BlogArchive extends Component {
     render() {
         return (
-            <div className='newletter-archive'>
+            <div className='blog-archive'>
                 <div className='blog-archive__title'>Archive</div>
                 <div className='blog-archive__items archive-items'>
                     {/* blog items */}

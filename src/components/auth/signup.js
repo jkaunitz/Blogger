@@ -13,10 +13,6 @@ class Signup extends Component {
         })
     }
 
-    componentDidMount() {
-        this.props.updateHeader('Welcome to My Blogger!', 'Create your account', false);
-    }
-
     render() {
         return (
             <div className='sign-up'>
