@@ -25,7 +25,7 @@ class BlogDetail extends Component {
                 <FormButton
                     className='blog-detail__cancel'
                     small={true}
-                    onClick={() => this.props.history.push('/dashboard')}
+                    onClick={() => this.props.history.push('/blog/new')}
                     title='Cancel'
                     />
             </div>

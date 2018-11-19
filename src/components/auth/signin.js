@@ -9,7 +9,7 @@ class Signin extends Component {
 
     onSubmit = (fields) => {
         this.props.signIn(fields, () => {
-            this.props.history.push('/dashboard');
+            this.props.history.push('/blog/new');
         })
     }
 

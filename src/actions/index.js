@@ -11,13 +11,6 @@ import {
 } from './blog';
 
 import {
-    changeSelectedRequestType,
-    createNewRequest,
-    fetchRequests,
-    changeStatus
-} from './requests';
-
-import {
     updateHeader
 } from './header';
 
@@ -26,10 +19,6 @@ export {
     signIn,
     fetchBlogs,
     fetchBlogWithId,
-    changeSelectedRequestType,
-    createNewRequest,
-    fetchRequests,
-    changeStatus,
     createNewBlog,
     editBlog,
     updateHeader

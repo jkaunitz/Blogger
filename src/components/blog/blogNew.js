@@ -17,13 +17,13 @@ class NewBlog extends Component {
         formData.append('image', image);
 
         this.props.createNewBlog(formData, () => {
-            this.props.history.push('/dashboard');
+            this.props.history.push('/blog/new');
         })
     
     };
 
     onCancel = (fields) => {
-        this.props.history.push('/dashboard');
+        this.props.history.push('/blog/new');
     };
 
     render() {

@@ -8,8 +8,8 @@ class Signup extends Component {
 
     onSubmit = (fields) => {
         this.props.signUp(fields, () => {
-            console.log('navigate to dashboard');
-            this.props.history.push('/dashboard');
+            console.log('navigate to new blog');
+            this.props.history.push('/blog/new');
         })
     }
 

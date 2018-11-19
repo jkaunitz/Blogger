@@ -20,13 +20,10 @@ import requireAuth from './components/requireAuth';
 import Signup from './components/auth/signup';
 import Signin from './components/auth/signin';
 
-// DASHBOARD
-import Dashboard from './components/dashboard';
+// BLOG
 import NewBlog from './components/blog/blogNew';
 import EditBlog from './components/blog/blogEdit';
 import BlogDetail from './components/blog/blogDetail';
-
-import NewRequest from './components/requests/requestsNew';
 
 function main() {
   ReactDOM.render(
@@ -38,21 +35,13 @@ function main() {
             <Route path='/signin' component={Signin}/>
             <Route path='/signup' component={Signup}/>
 
-            {/* <Route path='/dashboard' component={requireAuth(Dashboard)}/>
-
-            <Route path='/blog/new' component={requireAuth(NewBlog)}/>
+            {/* <Route path='/blog/new' component={requireAuth(NewBlog)}/>
             <Route path='/blog/edit/:id' component={requireAuth(EditBlog)}/>
-            <Route path='/blog/detail/:id' component={requireAuth(BlogDetail)}/>
-
-            <Route path='/request/new' component={requireAuth(NewRequest)}/> */}
-            <Route path='/dashboard' component={Dashboard}/>
+            <Route path='/blog/detail/:id' component={requireAuth(BlogDetail)}/> */}
 
             <Route path='/blog/new' component={NewBlog}/>
             <Route path='/blog/edit/:id' component={EditBlog}/>
             <Route path='/blog/detail/:id' component={BlogDetail}/>
-
-            <Route path='/request/new' component={NewRequest}/>
-
           </Layout>
         </Switch>
       </Router>

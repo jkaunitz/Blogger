@@ -4,8 +4,6 @@ import Button from '../button';
 
 import history from '../../history';
 
-import { ROOT_URL } from '../../config';
-
 import RequireAdmin from '../auth/requireAdmin';
 
 class BlogLatest extends Component {
