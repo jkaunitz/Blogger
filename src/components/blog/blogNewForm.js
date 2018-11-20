@@ -9,7 +9,7 @@ class NewBlogForm extends Component {
     
     render() {
 
-        const { handleSubmit, formTitle, blogToEdit } = this.props;
+        const { handleSubmit, formTitle } = this.props;
         const { 
             fieldOnePlaceholder, fieldOneTitle,
             fieldTwoPlaceholder, fieldTwoTitle  

@@ -35,13 +35,13 @@ function main() {
             <Route path='/signin' component={Signin}/>
             <Route path='/signup' component={Signup}/>
 
-            {/* <Route path='/blog/new' component={requireAuth(NewBlog)}/>
+            <Route path='/blog/new' component={requireAuth(NewBlog)}/>
             <Route path='/blog/edit/:id' component={requireAuth(EditBlog)}/>
-            <Route path='/blog/detail/:id' component={requireAuth(BlogDetail)}/> */}
+            <Route path='/blog/detail/:id' component={requireAuth(BlogDetail)}/>
 
-            <Route path='/blog/new' component={NewBlog}/>
+            {/* <Route path='/blog/new' component={NewBlog}/>
             <Route path='/blog/edit/:id' component={EditBlog}/>
-            <Route path='/blog/detail/:id' component={BlogDetail}/>
+            <Route path='/blog/detail/:id' component={BlogDetail}/> */}
           </Layout>
         </Switch>
       </Router>

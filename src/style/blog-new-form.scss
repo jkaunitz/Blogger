@@ -23,7 +23,8 @@
     &__submit, 
     &__cancel {
         grid-column: 1/-1;
-        grid-row: 1;
+        grid-row: 4;
+        margin-top: 2.5rem;
         justify-self: end;
         align-self: end;
 
