@@ -3,10 +3,10 @@
     grid-column: box-s/box-e;
     align-content: center;
 
-    height: 16rem;
-    width: 16rem;
+    height: 10rem;
+    width: 10rem;
     border: .15rem solid $color-purple;
-    border-radius: .5rem;
+    border-radius: 2.2rem;
 
     color: $color-purple;
 
@@ -17,8 +17,8 @@
 
     &__day {
         align-self: end;
-        font-size: 7rem;
-        line-height: 8.1rem;
+        font-size: 2rem;
+        line-height: 7rem;
         margin-bottom: 1rem;
 
         grid-row: s/m;
@@ -27,7 +27,7 @@
 
     &__month-year {
         align-self: start;
-        font-size: 2rem;
+        font-size: 1.2rem;
         line-height: 2.3rem;
 
         grid-row: m/e;
@@ -35,8 +35,8 @@
     }
 
     &__point {
-        height: 4rem;
-        width: 4rem;
+        height: 2rem;
+        width: 2rem;
         background-color: white;
         grid-row: s/e;
         grid-column: s/e;

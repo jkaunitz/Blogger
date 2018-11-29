@@ -19,7 +19,7 @@ class BlogDetail extends Component {
         console.log(this.props.blogToEdit);
         return (
             <div className='blog-detail'>
-                <FormTitle className='blog-detail__title' text='Blog Archive'/>
+                <FormTitle className='blog-detail__title' text='Blog Detail'/>
                 <BlogBox date={this.props.blogToEdit}/>
                 <BlogLatest {...this.props.blogToEdit}/>
                 <FormButton

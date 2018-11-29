@@ -9,12 +9,11 @@ class NewBlog extends Component {
 
     onSubmit = fields => {
 
-        const { title, body, image } = fields;
+        const { title, body } = fields;
 
         var formData = new FormData();
         formData.append('title', title);
         formData.append('body', body);
-        formData.append('image', image);
 
         this.props.createNewBlog(formData, () => {
             this.props.history.push('/blog/new');

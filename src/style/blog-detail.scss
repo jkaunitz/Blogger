@@ -5,10 +5,10 @@
     grid-column: content-s/content-e;
 
     display: grid;
-    grid-template-rows: 100px [add-s] 4.7rem [add-e s box-s] 16rem [box-e] 1fr [e];
-    grid-template-columns: [box-s] 16rem [box-e latest-s] 960px [latest-e];
+    grid-template-rows: 100px [add-s] 4.7rem [add-e s box-s] 10rem [box-e] 1fr [e];
+    grid-template-columns: [box-s] 10rem [box-e latest-s] 900px [latest-e];
 
-    grid-column-gap:  6.1rem;
+    grid-column-gap:  3.8rem;
 
     &__title {
         width: 100%;
@@ -18,12 +18,12 @@
     }
 
     &__cancel {
-        grid-row: 1;
+        grid-row: 5;
         grid-column: latest-s/latest-e;
         justify-self: end;
         align-self: end;
 
         margin-right: 1rem;
-        margin-bottom: 1.2rem;
+        margin-top: 1.2rem;
     }
 }

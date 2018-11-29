@@ -55,18 +55,6 @@ class editBlogForm extends Component {
                     component={FormButton}
                     onClick={this.props.onCancel}
                 />
-                <Field
-                    className='new-blog-form__image'
-                    small={true}
-                    name='image'
-                    type='file'
-                    title='Image'
-                    component={FormImage}
-                    imageUrl={this.props.initialValues.imageUrl ? 
-                            `${ROOT_URL}/${this.props.initialVAlues.imageUrl}` :
-                            `http://via.placeholder.com/150x137`}
-                />
-                
             </form>
         );
     }

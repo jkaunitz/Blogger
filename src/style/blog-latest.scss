@@ -7,7 +7,7 @@
     grid-template-columns: [s] 1fr [e];
 
     border: 1px solid $color-magenta;
-    border-radius: .5rem;
+    border-radius: 1.8rem;
 
     & > * {
         grid-column: s/e;
